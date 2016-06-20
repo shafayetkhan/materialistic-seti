@@ -369,7 +369,7 @@
    `(magit-diff-added ((,class (:inherit diff-added))))
    `(magit-diff-added-highlight ((,class (:inherit magit-diff-added
                                           :background ,far-background))))
-   `(magit-diff-removed ((,class (:inherit diff-removed))))
+   `(magit-diff-removed ((,class (:inherit diff-removed :foreground ,red))))
    `(magit-diff-removed-highlight ((,class (:inherit magit-diff-removed
                                             :background ,far-background))))
    `(magit-header ((,class (:inherit nil :weight bold))))
