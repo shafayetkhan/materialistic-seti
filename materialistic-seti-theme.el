@@ -234,7 +234,7 @@
    `(flx-highlight-face ((,class (:inherit nil :foreground ,yellow :weight bold :underline nil))))
 
    ;; which-function
-   `(which-func ((,class (:foreground ,blue :background nil))))
+   `(which-func ((,class (:foreground ,"white" :background nil :weight bold))))
 
    ;; Emacs interface
    `(cursor ((,class (:background ,input-text :foreground ,background))))
