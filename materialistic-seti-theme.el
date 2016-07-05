@@ -55,8 +55,8 @@
 (let* ((class '((class color) (min-colors 89)))
        (256color  (eq (display-color-cells (selected-frame)) 256))
        (truecolor (eq (display-color-cells (selected-frame)) 16777216))
-
-       (background (if (or window-system truecolor) "#000" "#262626")) ;; sidebar-container
+       (background (if (or window-system truecolor) "#000" "#151718")) ;; sidebar-container
+       ;; (background (if (or window-system truecolor) "#000" "#262626")) ;; sidebar-container
        ;; seti variables
        (background-2 "#1E2326")
        (background-3 "#0D1011")
@@ -240,7 +240,7 @@
    `(cursor ((,class (:background ,input-text :foreground ,background))))
    `(fringe ((,class (:background ,"#000" :foreground ,text-4))))
    `(left-margin ((,class (nil))))
-   `(hl-line ((,class (:background ,background-4))))
+   `(hl-line ((,class (:background ,"#262626"))))
    `(linum ((,class (:background ,background :foreground ,subtle))))
    `(linum-highlight-face ((,class (:background ,current-line :foreground ,foreground))))
    `(border ((,class (:background ,current-line))))
@@ -670,14 +670,19 @@
 
    ;; Spaceline
    `(spaceline-python-venv ((t (:foreground ,yellow))))
+   ;; `(spaceline-evil-normal ((t (:foreground ,foreground :background ,orange :inherit mode-line))))
    `(spaceline-evil-normal ((t (:foreground ,foreground :background ,orange :inherit mode-line))))
-   `(spaceline-evil-insert ((t (:foreground ,background :background ,green :inherit mode-line))))
+   ;; `(spaceline-evil-insert ((t (:foreground ,background :background ,green :inherit mode-line))))
+   `(spaceline-evil-insert ((t (:foreground ,background :background ,green))))
+   `(spaceline-evil-emacs ((t (:foreground ,background :background ,orange))))
    `(spaceline-evil-visual ((t (:foreground ,foreground :background ,selection :inherit mode-line))))
 
    ;; Spacemacs
    `(spacemacs-normal-face ((t (:inherit spaceline-evil-normal))))
    `(spacemacs-insert-face ((t (:inherit spaceline-evil-insert))))
    `(spacemacs-visual-face ((t (:inherit spaceline-evil-visual))))
+   `(spacemacs-hybrid-face ((t (:foreground,"#49483E" :background,"chartreuse3" :box (:line-width 1 :color,"chartreuse3" :style unspecified)  ;;:inherit spaceline-evil-insert
+                                           ))))
 
    ;; Outline
    `(outline-1 ((,class (:inherit nil :foreground ,"#eceff1"))))
